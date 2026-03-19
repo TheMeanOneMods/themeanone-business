@@ -5,74 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THEMEANONEDEVELOPMENTS</title>
 <style>
-  /* Reset & base */
-  body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333; line-height:1.6; }
-  a { color:#fff; text-decoration:none; }
+  body { margin:0; padding:0; font-family:'Arial',sans-serif; background:#0d0d0d; color:#f4f4f4; line-height:1.6; }
+  a { text-decoration:none; color:#fff; }
+  h2,h3 { margin:0.5rem 0; }
 
-  /* Header / Hero */
-  header { background: linear-gradient(135deg, #ff4e50, #f9d423); color:#fff; text-align:center; padding:3rem 1rem; }
-  header h1 { margin:0; font-size:2.5rem; letter-spacing:1px; }
-  header p { font-size:1.2rem; margin-top:0.5rem; }
+  header { background: linear-gradient(135deg,#ff4e50,#f9d423); color:#fff; text-align:center; padding:4rem 1rem; text-shadow:0 2px 6px rgba(0,0,0,0.5);}
+  header h1 { font-size:3rem; letter-spacing:1px; }
+  header p { font-size:1.3rem; margin-top:1rem; }
 
-  /* Sections */
-  section { max-width:900px; margin:2rem auto; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-  h2 { color:#ff4e50; margin-bottom:1rem; }
+  section { max-width:1000px; margin:2rem auto; padding:2rem; border-radius:12px; background:#1a1a1a; box-shadow:0 6px 20px rgba(0,0,0,0.5); }
+  h2 { color:#ff4e50; margin-bottom:1rem; text-align:center; text-transform:uppercase; letter-spacing:1px; }
 
-  /* Product Cards */
-  .products { display:flex; flex-wrap:wrap; gap:1rem; }
-  .card { flex:1 1 200px; background:#f9f9f9; padding:1rem; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+  .services { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+  .card { flex:1 1 250px; background:#262626; padding:1.5rem; border-radius:12px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.7); transition:0.3s; }
+  .card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(255,78,80,0.5); }
+  .card h3 { color:#f9d423; margin-bottom:0.5rem; }
+  .card p { font-size:0.95rem; color:#ccc; }
 
-  /* Buttons */
   .btn { display:inline-block; background:#ff4e50; color:#fff; padding:0.5rem 1rem; border-radius:6px; margin-top:0.5rem; transition:0.3s; }
-  .btn:hover { background:#f9d423; color:#333; }
+  .btn:hover { background:#f9d423; color:#0d0d0d; }
 
-  /* Footer */
-  footer { text-align:center; padding:1rem; margin-top:2rem; font-size:0.9rem; color:#777; }
+  footer { text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777; }
+
+  nav { text-align:center; margin-bottom:1rem; }
+  nav a { margin:0 1rem; font-weight:bold; }
+  @media (max-width:768px) { .services { flex-direction:column; align-items:center; } }
 </style>
 </head>
 <body>
 
 <header>
   <h1>THEMEANONEDEVELOPMENTS</h1>
-  <p>Digital mods and tools for PC gaming</p>
+  <p>Game Servers, Mods, Discord Tools & Digital Products</p>
+  <nav>
+    <a href="policies.html">Policies</a>
+    <a href="refund.html">Refund & Dispute</a>
+    <a href="cancel.html">Cancellation</a>
+    <a href="legal.html">Legal / Export</a>
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section>
-  <h2>Our Products</h2>
-  <div class="products">
+  <h2>Our Services</h2>
+  <div class="services">
     <div class="card">
-      <h3>TMO Core Mod Suite</h3>
-      <p>All-in-one mod system for 7DTD and other games.</p>
+      <h3>Extinction Survival Hosting</h3>
+      <p>Premium 7 Days to Die servers, fully modded, EAC-safe, managed 24/7.</p>
     </div>
     <div class="card">
-      <h3>Extinction Survival Tools</h3>
-      <p>Enhance your survival experience with premium utilities.</p>
+      <h3>Other Game Hosting</h3>
+      <p>Minecraft, Rust, and more! Optimized servers for performance and uptime.</p>
     </div>
     <div class="card">
-      <h3>Elite Mod Loader</h3>
-      <p>Easy installation and management of all mods.</p>
+      <h3>Discord Bots</h3>
+      <p>Custom bots for moderation, automation, rank systems, and community management.</p>
     </div>
     <div class="card">
-      <h3>Custom Game Utilities</h3>
-      <p>Tools and mods for advanced players and server owners.</p>
+      <h3>Mods & Digital Tools</h3>
+      <p>Downloadable mods, utilities, and game-enhancing tools for PC gamers.</p>
     </div>
   </div>
 </section>
 
 <section>
   <h2>Customer Support</h2>
-  <p>Email: <a class="btn" href="mailto:support@themeandev.com">support@themeandev.com</a></p>
+  <p>Email: <a class="btn" href="mailto:chh2141@email.vccs.edu">chh2141@email.vccs.edu</a></p>
   <p>Discord: <a class="btn" href="https://discord.gg/yourserver" target="_blank">Join our server</a></p>
 </section>
 
-<section>
-  <h2>Policies</h2>
-  <p><strong>Refund & Dispute Policy:</strong> All products are digital. Refunds issued only if product is not delivered or defective.</p>
-  <p><strong>Contact Policy:</strong> Customer inquiries will be answered within 48 hours via email or Discord.</p>
-</section>
-
 <footer>
-  &copy; 2026 THEMEANONEDEVELOPMENTS
+  &copy; 2026 THEMEANONEDEVELOPMENTS | All rights reserved
 </footer>
 
 </body>
