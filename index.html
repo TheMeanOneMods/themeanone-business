@@ -3,38 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THEMEANONEDEVELOPMENTS | Game Servers & Digital Hosting</title>
+<title>THEMEANONEDEVELOPMENTS</title>
 <style>
 /* Base */
-body { margin:0; padding:0; font-family:'Arial',sans-serif; background:#0d0d0d; color:#f4f4f4; scroll-behavior: smooth; }
+body { margin:0; padding:0; font-family:'Arial',sans-serif; background:#0d0d0d; color:#f4f4f4; scroll-behavior:smooth; }
 a { text-decoration:none; color:#fff; }
-h2,h3,h4 { margin:0.5rem 0; }
+h2,h3 { margin:0.5rem 0; }
 
-/* Header */
-header { background: linear-gradient(135deg,#ff4e50,#f9d423); color:#fff; text-align:center; padding:3rem 1rem; position:sticky; top:0; z-index:100; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+/* Sticky Header */
+header { position:sticky; top:0; z-index:100; background:linear-gradient(135deg,#ff4e50,#f9d423); text-align:center; padding:2rem 1rem; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
 header h1 { font-size:2.5rem; letter-spacing:1px; }
 header p { font-size:1.2rem; margin-top:0.5rem; }
 nav a { margin:0 1rem; font-weight:bold; transition:0.3s; }
 nav a:hover { color:#0d0d0d; background:#f9d423; padding:4px 8px; border-radius:6px; }
 
 /* Sections */
-section { max-width:1000px; margin:2rem auto; padding:2rem; border-radius:12px; background:#1a1a1a; box-shadow:0 6px 20px rgba(0,0,0,0.5); opacity:0; transform:translateY(50px); transition:all 0.8s ease; }
+section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:4rem 2rem; opacity:0; transform:translateY(50px); transition:all 1s ease; }
 section.visible { opacity:1; transform:translateY(0); }
-h2 { color:#ff4e50; margin-bottom:1rem; text-align:center; text-transform:uppercase; letter-spacing:1px; }
+h2 { color:#ff4e50; margin-bottom:1rem; text-transform:uppercase; text-align:center; }
 
-/* Services Cards */
-.services { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
-.card { flex:1 1 250px; background:#262626; padding:1.5rem; border-radius:12px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.7); transition:0.3s; }
-.card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(255,78,80,0.5); }
-.card h3 { color:#f9d423; margin-bottom:0.5rem; }
-.card p { font-size:0.95rem; color:#ccc; }
+/* Hero */
+#hero { background:linear-gradient(120deg,#1a1a1a,#262626); text-align:center; color:#fff; }
+#hero h1 { font-size:3rem; }
+#hero p { font-size:1.5rem; }
+
+/* Cards for Services */
+.services { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; max-width:1000px; }
+.card { flex:1 1 250px; background:#262626; padding:2rem; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.7); text-align:center; transition:0.3s; }
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 30px rgba(255,78,80,0.5); }
+.card h3 { color:#f9d423; margin-bottom:1rem; }
+.card p { color:#ccc; }
 
 /* Buttons */
-.btn { display:inline-block; background:#ff4e50; color:#fff; padding:0.5rem 1rem; border-radius:6px; margin-top:0.5rem; transition:0.3s; }
+.btn { display:inline-block; background:#ff4e50; color:#fff; padding:0.6rem 1.2rem; border-radius:6px; margin-top:0.5rem; transition:0.3s; }
 .btn:hover { background:#f9d423; color:#0d0d0d; }
 
+/* Features List */
+.features ul { list-style:none; padding:0; }
+.features li { background:#1a1a1a; padding:1rem; margin:1rem 0; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.5); }
+
 /* Footer */
-footer { text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777; margin-top:2rem; }
+footer { text-align:center; padding:2rem 1rem; color:#777; }
 
 /* Responsive */
 @media (max-width:768px) { .services { flex-direction:column; align-items:center; } }
@@ -42,10 +51,9 @@ footer { text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777; mar
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <h1>THEMEANONEDEVELOPMENTS</h1>
-  <p>Professional Game Servers, Discord Bot Hosting & Digital Tools</p>
+  <p>Game Servers, Discord Bot Hosting & Digital Products</p>
   <nav>
     <a href="#services">Services</a>
     <a href="#features">Features</a>
@@ -54,52 +62,60 @@ footer { text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777; mar
   </nav>
 </header>
 
+<!-- Hero -->
+<section id="hero" class="visible">
+  <h1>Professional Game & Digital Hosting</h1>
+  <p>Server Hosting, Discord Bots, Mods & Tools — All in One Place</p>
+  <a class="btn" href="#contact">Get Support</a>
+</section>
+
 <!-- Services -->
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
     <div class="card">
       <h3>Game Server Hosting</h3>
-      <p>Extinction Survival and other game servers with mods pre-installed, fully managed, 24/7 uptime, EAC-safe, high-performance hosting.</p>
+      <p>Extinction Survival and other game servers fully managed, EAC-safe, 24/7 uptime, mod pre-installed.</p>
     </div>
     <div class="card">
       <h3>Discord Bot Hosting</h3>
-      <p>Custom bots for moderation, automation, ranking, leveling, notifications, and full server management.</p>
+      <p>Custom bots for moderation, automation, leveling, notifications, and server management.</p>
     </div>
     <div class="card">
       <h3>Digital Tools & Mods</h3>
-      <p>Game-enhancing mods, utilities, and software delivered digitally, optimized for performance and compatibility.</p>
+      <p>Game-enhancing mods and utilities delivered digitally, fully optimized for PC gamers.</p>
     </div>
   </div>
 </section>
 
 <!-- Features -->
-<section id="features">
+<section id="features" class="features">
   <h2>Why Choose Us</h2>
   <ul>
-    <li>24/7 Managed Hosting & Bot Monitoring</li>
+    <li>24/7 Managed Hosting & Monitoring</li>
     <li>High-performance SSD servers with low latency</li>
     <li>Automated Mod & Plugin Installation</li>
     <li>Dedicated Support via Email & Discord</li>
     <li>EAC & Anti-Cheat compliant setups</li>
+    <li>Scalable infrastructure for growing communities</li>
   </ul>
 </section>
 
 <!-- Policies -->
 <section id="policies">
-  <h2>Policies</h2>
+  <h2>Policies & Compliance</h2>
 
   <h3>Refund & Dispute Policy</h3>
-  <p>All products and services are digital. Refunds only issued if service or product is undelivered or defective. Contact us via <a href="mailto:chh2141@email.vccs.edu">email</a> or Discord within 48 hours of issue. Chargebacks without prior contact may result in account restrictions.</p>
+  <p>All products and services are digital. Refunds only issued if a product/service is undelivered or defective. Contact via <a href="mailto:chh2141@email.vccs.edu">email</a> or Discord within 48 hours. Unauthorized chargebacks may result in account restrictions.</p>
 
   <h3>Cancellation Policy</h3>
-  <p>All services may be canceled within 3 days of purchase for a refund. After 3 days, all sales are final. Requests must be submitted via <a href="mailto:chh2141@email.vccs.edu">email</a>.</p>
+  <p>Cancellations allowed within 3 days of purchase. After 3 days, all sales are final. Requests must be submitted via <a href="mailto:chh2141@email.vccs.edu">email</a>.</p>
 
   <h3>Legal & Export Restrictions</h3>
-  <p>Services comply with all US laws. Customers must ensure compliance with local and international laws. Prohibited uses include hacking, illegal activity, or copyright violations. Digital products may be restricted under export law.</p>
+  <p>All services comply with US law. Users must comply with local/international laws. Prohibited use: hacking, illegal activity, copyright infringement. Digital products may be restricted under export law.</p>
 
   <h3>Terms & Conditions</h3>
-  <p>By using our services, you accept all policies. Services are provided "as-is". Abuse or violation may result in account suspension. All digital products and content remain the property of THEMEANONEDEVELOPMENTS. Users may not redistribute or resell content without permission.</p>
+  <p>By using our services, you accept all policies. Services are provided "as-is". Misuse may result in account suspension. All content remains property of THEMEANONEDEVELOPMENTS. Users may not redistribute or resell content without permission.</p>
 </section>
 
 <!-- Contact -->
@@ -115,13 +131,11 @@ footer { text-align:center; padding:2rem 1rem; font-size:0.9rem; color:#777; mar
 </footer>
 
 <script>
-// Scroll animation for sections
+// Scroll reveal
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
-  });
-}, { threshold: 0.2 });
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); }});
+},{threshold:0.2});
 sections.forEach(section => observer.observe(section));
 </script>
 
